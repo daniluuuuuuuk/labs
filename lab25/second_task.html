@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <p>Продемонстрируйте управление окнами. Используйте при этом методы window.alert(), window.confirm(), window.prompt(), window.open(), window.focus(), window.setTimeout(), window.clearTimeout() </p>
+    <script>
+      window.alert('Hello:)');
+      var isAdmin = confirm("Вы - администратор?");
+      alert( isAdmin );
+      var years = prompt('Сколько вам лет?', 100);
+      alert('Вам ' + years + ' лет!');
+      var myWindow = window.open('https://www.google.com', 'new', 'width=400,height=300, toolbar=1');
+      myWindow.focus();
+      var timeoutID;
+      function delayedAlert() {
+        timeoutID = window.setTimeout(slowAlert, 8000);
+      }
+      function slowAlert() {
+        alert("That's too slooooooooooow!");
+      }
+      function clearAlert() {
+        window.clearTimeout(timeoutID);
+      }
+    </script>
+    <button onclick="delayedAlert();">Show</button><br><br>
+    <button onclick="clearAlert();">Cancel</button>
+    <p><a href="third_task.html">Next Task</a></p>
+  </body>
+</html>

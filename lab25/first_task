@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <p>Используйте объект Navigator для определения типа браузера</p>
+    <script>
+      function get_browser_name(){
+        var ua = navigator.userAgent;
+        if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+        if (ua.search(/Firefox/) > 0) return 'Firefox';
+        if (ua.search(/Opera/) > 0) return 'Opera';
+        if (ua.search(/Safari/) > 0) return 'Safari';
+        if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+        return 'Не определен';
+      }
+      var browser = get_browser_name();
+      document.write('Имя вашего браузера - '+browser);
+    </script>
+  </body>
+</html>
