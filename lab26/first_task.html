@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>1st_task</title>
+    <script type="text/javascript">
+        numimg = 0
+        imgslide = new Array()
+        imgslide[0] = new Image()
+        imgslide[1] = new Image()
+        imgslide[2] = new Image()
+        imgslide[3] = new Image()
+        imgslide[0].src = "ng1.jpg"
+        imgslide[1].src = "ng2.jpg"
+        imgslide[2].src = "ng3.jpg"
+        imgslide[3].src = "ng4.jpg"
+        function demoslides() {
+            document.images[0].src = imgslide[numimg].src
+            numimg++;
+            if (numimg == 4) numimg = 0;
+            setTimeout("demoslides()", 1500)
+        }
+    </script>
+
+</head>
+<body bgcolor="#FFFFFF" onload="demoslides()">
+	<h1 style="margin-left: 560px; margin-top: 20px; color: darkred;">С наступающим:)</h1>
+	<h2 style="margin-left: 460px; margin-top: 20px; color: darkred;"><a href="second_task" style="text-decoration: none; color: darkred;">А вот и следующее задание(Нажмите на меня:))</a></h2>
+    <img src="ng1.jpg" width="400" height="300" alt="" style="margin-left: 500px; margin-top: 50px;" /><
+    
+</body>
+</html>
